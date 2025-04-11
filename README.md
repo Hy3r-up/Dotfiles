@@ -1,2 +1,2 @@
-# Dotfiles
-most of them are defenetly not stolen
+#Gruvbox Dark Dotfiles
+most of them are definitely not stolen
