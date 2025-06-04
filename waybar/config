@@ -1,0 +1,52 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+// Sleek
+
+{
+"include": "/etc/xdg/waybar/modules",
+"layer": "top",
+"position": "top",
+"height": 14,
+"margin-left": 10,
+"margin-right": 10,
+"margin-top": 2,
+
+"modules-left": [
+	"custom/menu",
+	"custom/separator#blank",
+	"clock",
+	"custom/separator#blank",
+    "hyprland/workspaces#4"
+],
+
+"modules-center": [
+    // "mpris",
+	"custom/spotify",
+	"custom/separator#blank",
+    "group/audio",
+],
+
+"modules-right": [
+	"hyprland/language",
+	"custom/separator#blank_2",
+	"tray",
+	"custom/separator#blank",
+	"custom/swaync",
+	"custom/separator#blank",
+	"custom/power",
+	],
+
+
+// Additional format / customize modules
+
+"custom/power": {
+	"format": " ",
+	"icon-size": 20,
+	"tooltip": false,
+},
+
+"clock": {
+	"format": "{:%I:%M %p - %d/%b}", //for AM/PM
+    // "format": "{:%H:%M - %d/%b}", // 24H
+	"tooltip": false
+},
+}
