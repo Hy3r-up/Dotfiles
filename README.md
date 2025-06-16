@@ -12,5 +12,6 @@ Menu: rofi
 ![1750101458_grim](https://github.com/user-attachments/assets/51a8ff5e-8daa-4297-8fe2-081c203961ae)
 
 Powermenu: wlogout
+![1750102977_grim](https://github.com/user-attachments/assets/37070e80-486e-4af0-a294-f98eb59e5f81)
 
 Terminal: kitty
