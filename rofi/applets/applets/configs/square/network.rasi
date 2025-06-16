@@ -1,0 +1,130 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    show-icons:                     false;
+	font:                      		"Comfortaa 12";
+    disable-history:                false;
+	sidebar-mode: 					false;
+}
+
+@import "/home/hypr/.cache/wal/colors-rofi-dark.rasi"
+// @import "../../../styles/colors.rasi"
+
+* {
+    background-color:               @background;
+    text-color:                     @foreground;
+    on:                             #B2B6FF;
+    off:                            #9C9EDD;
+
+}
+
+window {
+    transparency:                   "real";
+    border-radius:                  0px;
+    location:                       northeast;
+	width:							350px;
+    x-offset:                       -5px;
+}
+
+prompt {
+    enabled: 						true;
+    padding:                        10px;
+	background-color: 				@background;
+	text-color: 					@foreground;
+    border:                  		2px 2px 3px 2px;
+    border-radius:                  0px;
+    border-color:                  	@foreground;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							" Network ";
+	background-color: 				@active-background;
+	text-color: 					@foreground;
+    padding:                        12px 10px 0px 10px;
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, prompt ];
+    spacing:                        0px;
+    background-color:               @background;
+    text-color:                     @foreground;
+    expand:                         false;
+    border:                  		0px;
+    border-radius:                  0px;
+    border-color:                  	@foreground;
+    margin:                         0px 0px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+listview {
+    columns:						4;
+    lines:							1;
+    spacing:                        12px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background;
+    children:                       [ inputbar, listview ];
+    spacing:                        12px;
+    margin:                         12px;
+}
+
+element {
+    background-color:               @background-light;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+	font:							"feather 20";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         19px 10px 19px 10px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @off;
+    text-color:                     @background;
+    border-radius:                  0px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @on;
+    text-color:                     #2E96D7;
+}
+
+element selected {
+    background-color:               @background-light;
+    text-color:                     @selected-urgent-background;
+    border:                  		0px;
+    border-radius:                  0px;
+    border-color:                  	@border;
+}
+
+element selected.urgent {
+    background-color:               @on;
+    text-color:                     @background;
+}
+
+element selected.active {
+    background-color:               @off;
+    color:                          @foreground;
+}
