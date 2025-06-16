@@ -9,7 +9,7 @@ Notification-daemon: swaync
 ![1749017716_grim](https://github.com/user-attachments/assets/f390f7f1-9dc8-483f-a2dc-47b4337090ef)
 
 Menu: rofi
-![1749017719_grim](https://github.com/user-attachments/assets/8feb0e3c-1769-4764-8025-d302a69e1130)
+![1750101458_grim](https://github.com/user-attachments/assets/51a8ff5e-8daa-4297-8fe2-081c203961ae)
 
 Powermenu: wlogout
 
