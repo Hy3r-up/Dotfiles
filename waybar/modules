@@ -68,6 +68,22 @@
       "on-scroll-down": "shift_down"
 },
 
+"network": {
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "on-click": "/home/hypr/.config/rofi/applets/applets/network.sh",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 50,
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "icon-size": 550
+},
+
 "hyprland/language": {
     "format": "{}",
     "format-en": "English",
@@ -79,7 +95,7 @@
     "format": "  {}",
     "interval": 1,
     "on-click": "playerctl play-pause",
-    "exec": "/etc/xdg/waybar/scripts/spotify.sh"
+    "exec": "/home/hypr/.config/waybar/scripts/spotify.sh"
 },
 
 "pulseaudio": {
@@ -93,7 +109,7 @@
         "phone": "",
         "portable": "",
         "car": "",
-    "default": ["", "", "󰕾", ""],
+    "default": ["ﱝ", "", "󰕾", ""],
     "ignored-sinks": ["Easy Effects Sink"],
     },
     "scroll-step": 5.0,
@@ -146,7 +162,7 @@
 },
 
 "custom/menu": {
-    "format": "{}",
+    "format": "{}",
     "exec": "echo ; echo 󱓟 app launcher",
     "interval" : 86400, // once every day
     "tooltip": true,
@@ -183,28 +199,6 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
 },
-
-// NOTE:! This is only for Arch and Arch Based Distros
-"custom/updater":{
-    "format": " {}",
-    "exec": "checkupdates | wc -l",
-    "exec-if": "[[ $(checkupdates | wc -l) ]]",
-    "interval": 15,
-    "on-click": "kitty -T update paru -Syu || yay -Syu && notify-send 'The system has been updated'",
-},
-
-"custom/weather": {
-    "format": "{}",
-    "format-alt": "{alt}: {}",
-    "format-alt-click": "click",
-    "interval": 3600,
-    "return-type": "json",
-    "exec": "~/.config/hypr/scripts/Weather.sh",
-    "exec": "~/.config/hypr/scripts/Weather.py",
-    "exec-if": "ping wttr.in -c1",
-    "tooltip" : true,
-},
-
 
 // Separators
 "custom/separator#dot": {

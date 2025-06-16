@@ -2,7 +2,7 @@
 // Sleek
 
 {
-"include": "/etc/xdg/waybar/modules",
+"include": "/home/hypr/.config/waybar/modules",
 "layer": "top",
 "position": "top",
 "height": 14,
@@ -31,6 +31,7 @@
 	"tray",
 	"custom/separator#blank",
 	"custom/swaync",
+	"network",
 	"custom/separator#blank",
 	"custom/power",
 	],
